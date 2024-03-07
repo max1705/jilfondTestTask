@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+#app {
+  font-family: Montserrat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main {
+  margin: 0 50px;
+  box-shadow: 0px 0px 10px 0px #0000001A;
+  background-color: #FDFDFD;
+  border-radius: 10px;
+  display: flex;
+	height: 85vh;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+  margin-bottom: 26px;
+}
+.sidebar {
+  padding: 20px 27px 30px 27px;
+  min-width: 291px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.content {
+  border-left: 1px solid #E0E0E0;
+	width: 100%;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+li {
+  width: 240px;
+  height: 70px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #0000001A;
+  display: flex;
+  cursor: pointer;
+}
+.active {	
+	box-shadow: none;
+	border: 1px solid #E0E0E0;
+  .userCard {
+    background-color: #E0E0E0;
+    border-radius: 0 10px 10px 0;
+  }
+  .userCardName {
+    text-align: center;
+  }
+}
+.userCard {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: 0px;
+	padding: 0 15px;
+	gap: 5px;
+	overflow: hidden;
+}
+.userCardName {
+	font-weight: 600;
+	color: #333333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.userCardEmailBlock {
+  margin-bottom: 10px;
+}
+.userCardLightText {
+	color: #76787D;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.userCardAboutBlock {
+  margin: 20px 0 30px;
+}
+.userInfo {
+  padding: 20px 21px;
+  display: flex;
+  gap: 60px;
+}
+.userInfoTemp {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+h1 {
+	text-align: left;
+	margin: 0;
+	color: #E31F24;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 39px;
+	letter-spacing: 0em;
+}
+h2 {
+	text-align: left;
+	margin: 0;
+	color: #333333;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 22px;
+	letter-spacing: 0em;
+  margin-bottom: 24px;
+}
+input {
+	width: 240px;
+	height: 50px;
+	padding: 16px 24px;
+	border-radius: 8px;
+	border: 1.5px solid #E9ECEF;
+	box-sizing: border-box;
+	font-size: 14px;
+  margin-bottom: 22px;
+}
+.loader {
+  width: 50px;
+  padding: 8px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #333333;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+.hiddenLoader {
+  display: none;
+}
